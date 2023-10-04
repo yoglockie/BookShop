@@ -1,11 +1,11 @@
 [
     {
-        "id": "1",
-        "title": "The Silent Patient",
-        "author": "F. Scott Fitzgerald",
-        "price": 12.99,
-        "rating": 4.5,
-        "image": "https://m.media-amazon.com/images/I/81JJPDNlxSL._SL1500_.jpg",
+        "id":     "1",
+        "title":  "The Silent Patient",
+        "author":  "F. Scott Fitzgerald",
+        "price":  12.99,
+        "rating":  4.5,
+        "image":   "https://m.media-amazon.com/images/I/81JJPDNlxSL._SL1500_.jpg",
         "category": "Fiction"
     },
     {
@@ -33,7 +33,7 @@
         "price": 16.95,
         "rating": 4.4,
         "image": "https://covers.openlibrary.org/b/id/12141259-L.jpg",
-        "category": "Non-Fiction"
+        "category": "Fiction"
     },
     {
         "id": "5",
@@ -69,7 +69,7 @@
         "price": 11.99,
         "rating": 4.6,
         "image": "https://covers.openlibrary.org/b/id/8579190-L.jpg",
-        "category": "Science Fiction"
+        "category": "Fiction"
     },
     {
         "id": "9",
@@ -114,7 +114,7 @@
         "price": 11.49,
         "rating": 4.5,
         "image": "https://covers.openlibrary.org/b/id/12646545-L.jpg",
-        "category": "Science Fiction"
+        "category": "Fiction"
     },
     {
         "id": "14",
@@ -141,7 +141,7 @@
         "price": 10.99,
         "rating": 4.4,
         "image": "https://covers.openlibrary.org/b/id/12643487-L.jpg",
-        "category": "Science Fiction"
+        "category": "Fiction"
     },
     {
         "id": "17",
@@ -150,7 +150,7 @@
         "price": 15.95,
         "rating": 4.3,
         "image": "https://covers.openlibrary.org/b/id/8296480-L.jpg",
-        "category": "Historical Fiction"
+        "category": "Fiction"
     },
     {
         "id": "18",
@@ -168,7 +168,7 @@
         "price": 11.95,
         "rating": 4.8,
         "image": "https://covers.openlibrary.org/b/id/1632460-L.jpg",
-        "category": "Post-Apocalyptic"
+        "category": "Fiction"
     },
     {
         "id": "20",
@@ -177,7 +177,7 @@
         "price": 13.49,
         "rating": 4.5,
         "image": "https://covers.openlibrary.org/b/id/11447888-L.jpg",
-        "category": "Science Fiction"
+        "category": "Fiction"
     },
     {
         "id": "21",
@@ -186,7 +186,7 @@
         "price": 14.99,
         "rating": 4.7,
         "image": "https://covers.openlibrary.org/b/id/9705237-L.jpg",
-        "category": "Science Fiction"
+        "category": "Fiction"
     },
     {
         "id": "22",
@@ -231,7 +231,7 @@
         "price": 9.99,
         "rating": 4.0,
         "image": "https://covers.openlibrary.org/b/id/450171-L.jpg",
-        "category": "Self-Help"
+        "category": "Motivational"
       },
       {
         "id": "27",
@@ -258,7 +258,7 @@
         "price": 8.49,
         "rating": 4.7,
         "image": "https://covers.openlibrary.org/b/id/120792-L.jpg",
-        "category": "Military Strategy"
+        "category": "Military"
       },
       {
         "id": "30",
@@ -267,7 +267,7 @@
         "price": 11.99,
         "rating": 4.5,
         "image": "https://covers.openlibrary.org/b/id/11423722-L.jpg",
-        "category": "Political Philosophy"
+        "category": "Political"
       },
       {
         "id": "31",
@@ -285,7 +285,7 @@
         "price": 10.99,
         "rating": 4.2,
         "image": "https://covers.openlibrary.org/b/id/10699158-L.jpg",
-        "category": "Self-Help"
+        "category": "Motivational"
       },
       {
         "id": "33",
@@ -294,7 +294,7 @@
         "price": 12.95,
         "rating": 4.1,
         "image": "https://covers.openlibrary.org/b/id/13729270-L.jpg",
-        "category": "Personal Development"
+        "category": "Motivational"
       },
       {
         "id": "34",
@@ -321,7 +321,7 @@
         "price": 9.95,
         "rating": 4.3,
         "image": "https://covers.openlibrary.org/b/id/14314462-L.jpg",
-        "category": "Classic Literature"
+        "category": "Literature"
       },
       {
         "id": "37",
@@ -330,7 +330,7 @@
         "price": 11.99,
         "rating": 4.0,
         "image": "https://covers.openlibrary.org/b/id/6595466-L.jpg",
-        "category": "Classic Literature"
+        "category": "Literature"
       },
       {
         "id": "38",
@@ -348,7 +348,7 @@
         "price": 10.95,
         "rating": 4.4,
         "image": "https://covers.openlibrary.org/b/id/14310010-L.jpg",
-        "category": "Classic Literature"
+        "category": "Literature"
       },
       {
         "id": "40",

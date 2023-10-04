@@ -2,8 +2,8 @@
     width: 200px;
     max-width: 80%;
     margin: 15px;
-    padding: 10px;
-    background-color: #fff;
+    padding: 15px;
+    background-color: #E3E0DC;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -28,6 +28,7 @@
 }
 
 .author-name {
+    
     color: #555;
     margin-bottom: 5px;
 }
