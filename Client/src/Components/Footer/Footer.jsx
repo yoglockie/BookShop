@@ -8,15 +8,15 @@ const Footer = () => {
     return (
         <div>
             <footer>
-                <div class="footer">
-                    <div class="row">
+                <div className="footer">
+                    <div className="row">
                         <a href="#"><Facebook/></a>
                         <a href="#"><Instagram/></a>
                         <a href="#"><Youtube/></a>
                         <a href="#"><Twitter/></a>
                     </div>
 
-                    <div class="row">
+                    <div className="row">
                         <ul>
                             <li><a href="#">Contact us</a></li>
                             <li><a href="#">Our Services</a></li>
@@ -26,8 +26,8 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div class="row">
-                        BOOKSHOP Copyright © 2023 Bookshop - All rights reserved || Designed By: Hardik and Lokesh
+                    <div className="row">
+                        BOOKSHOP Copyright © 2023 Bookshop - All rights reserved || Designed By: Lokesh
                     </div>
                 </div>
             </footer>

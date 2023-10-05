@@ -3,64 +3,41 @@ import "./Cart.css"
 
 const Cart = () => {
   return (
-    <div class="CartContainer">
-    <div class="Header">
-        <h3 class="Heading">Shopping Cart</h3>
-        <h5 class="Action">Remove all</h5>
-    </div>
-
-    <div class="Cart-Items">
-          <div class="image-box">
-              <img src="https://m.media-amazon.com/images/I/51bX4hDuBIL.jpg" alt='' style={{ height:"120px" }} />
-          </div>
-          <div class="about">
-              <h1 class="title">Apple Juice</h1>
-              <h3 class="subtitle">250ml</h3>
-              <img src="images/veg.png" alt='' style={{ height:"30px" }}/>
-          </div>
-          <div class="counter">
-              <div class="btn">+</div>
-              <div class="count">2</div>
-              <div class="btn">-</div>
-          </div>
-          <div class="prices">
-              <div class="amount">$2.99</div>
-              <div class="save"><u>Save for later</u></div>
-              <div class="remove"><u>Remove</u></div>
-          </div>
-    </div>
-
-    <div class="Cart-Items pad">
-          <div class="image-box">
-              <img src="https://m.media-amazon.com/images/I/51bX4hDuBIL.jpg"  alt='' style={{ height:"120px" }} />
-          </div>
-          <div class="about">
-              <h1 class="title">Grapes Juice</h1>
-              <h3 class="subtitle">250ml</h3>
-              <img src="images/veg.png" alt='' style={{ height:"30px" }}/>
-          </div>
-          <div class="counter">
-              <div class="btn">+</div>
-              <div class="count">1</div>
-              <div class="btn">-</div>
-          </div>
-          <div class="prices">
-              <div class="amount">$3.19</div>
-              <div class="save"><u>Save for later</u></div>
-              <div class="remove"><u>Remove</u></div>
-          </div>
-    </div>
-  <hr/> 
-  <div class="checkout">
-  <div class="total">
-      <div>
-          <div class="Subtotal">Sub-Total</div>
-          <div class="items">2 items</div>
+    <div class="cart-container">
+        <h1>🛒</h1> 
+    <div class="cart-item">
+      <img src="https://m.media-amazon.com/images/I/51bX4hDuBIL.jpg" alt="Book 1" class="product-image"/>
+      <div class="product-details">
+        <p class="product-name">Book 1</p>
+        <p class="price">$19.99</p>
       </div>
-      <div class="total-amount">$6.18</div>
+      <div class="quantity-counter">
+        <span>Qty:</span>
+        <input type="number" value="1" min="1"/>
+      </div>
+    </div>
+
+    <div class="cart-item">
+       
+      <img src="https://m.media-amazon.com/images/I/51seH-SzjuL.jpg" alt="Book 2" class="product-image"/>
+      <div class="product-details">
+        <p class="product-name">Book 2</p>
+        <p class="price">$24.99</p>
+      </div>
+      <div class="quantity-counter">
+        <span>Qty:</span>
+        <input type="number" value="2" min="1"/>
+      </div>
+    </div>
+
+  
+
+    <div class="total-amount">
+      Total: $44.98
+    </div>
+
+    <a href="#" class="checkout-btn">Proceed to Checkout</a>
   </div>
-  <button class="button">Checkout</button></div>
-</div>
   )
 }
 

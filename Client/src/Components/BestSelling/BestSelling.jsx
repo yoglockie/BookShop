@@ -3,34 +3,34 @@ import "./BestSelling.css"
 const BestSelling = () => {
     return (
         <div>
-            <section id="best-selling" class="leaf-pattern-overlay">
-                <div class="corner-pattern-overlay"></div>
-                <div class="container">
-                    <div class="row justify-content-center">
+            <section id="best-selling" className="leaf-pattern-overlay">
+                <div className="corner-pattern-overlay"></div>
+                <div className="container">
+                    <div className="row justify-content-center">
 
-                        <div class="col-md-8">
+                        <div className="col-md-8">
 
-                            <div class="row">
+                            <div className="row">
 
-                                <div class="col-md-6 left">
-                                    <figure class="products-thumb">
-                                        <img src="https://covers.openlibrary.org/b/id/11447888-L.jpg" alt="book" class="single-image"/>
+                                <div className="col-md-6 left">
+                                    <figure className="products-thumb">
+                                        <img src="https://covers.openlibrary.org/b/id/11447888-L.jpg" alt="book" className="single-image"/>
                                     </figure>
                                 </div>
 
-                                <div class="col-md-6 right">
-                                    <div class="product-entry">
-                                        <h2 class="section-title divider">Best Selling Book</h2>
+                                <div className="col-md-6 right">
+                                    <div className="product-entry">
+                                        <h2 className="section-title divider">Best Selling Book</h2>
 
-                                        <div class="products-content">
-                                            <div class="author-name">By Timbur Hood</div>
-                                            <h3 class="item-title">Birds gonna be happy</h3>
+                                        <div className="products-content">
+                                            <div className="author-name">By Timbur Hood</div>
+                                            <h3 className="item-title">Birds gonna be happy</h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet,
                                                 libero ipsum enim pharetra hac.</p>
-                                            <div class="item-price">$ 45.00</div>
-                                            <div class="btn-wrap">
-                                                <a href="#" class="btn-accent-arrow">shop it now <i
-                                                    class="icon icon-ns-arrow-right"></i></a>
+                                            <div className="item-price">$ 45.00</div>
+                                            <div className="btn-wrap">
+                                                <a href="#" className="btn-accent-arrow">shop it now <i
+                                                    className="icon icon-ns-arrow-right"></i></a>
                                             </div>
                                         </div>
 

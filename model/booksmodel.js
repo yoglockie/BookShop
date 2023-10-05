@@ -49,12 +49,12 @@ const getProducts = async()=>{
 //getProducts();
 
 
-const getCategory =async()=>{
+const getCategory =async(cat)=>{
         try {
             
             ConnectDb();
             
-            const productOfCategory = await books.find({category:"Fiction"})
+            const productsOfCategory = await books.find({category:cat})
             console.log(productOfCategory);
         } 
         catch (error) {
@@ -62,6 +62,7 @@ const getCategory =async()=>{
          }
          finally{
             mongoose.connection.close();
+            return productOfCategory;
          }
 }
 
@@ -473,4 +474,6 @@ const deleteDocumentsByTitle = async () => {
 //deleteDocumentsByTitle();
 
 
-export default {createDocument,getProducts,getCategory,insertManyBooks,deleteDocumentsByTitle};
+//export default {createDocument,getProducts,getCategory,insertManyBooks,deleteDocumentsByTitle};
+
+module.exports = {createDocument,getProducts,getCategory,insertManyBooks,deleteDocumentsByTitle};

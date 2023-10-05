@@ -48,3 +48,80 @@ header {
       
       margin-left: 5px;
   }
+
+
+
+
+
+
+
+
+
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    color: white;
+  }
+  
+  .left-section img {
+    max-height: 40px; /* Adjust the height as needed */
+    margin-left: 20px;
+  }
+  
+  .middle-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .middle-section li {
+    margin-right: 20px;
+  }
+  
+  .middle-section a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .cart-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .login-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .middle-section {
+      display: none;
+    }
+  
+    .burger-menu {
+      display: block;
+    }
+  }
+
+  

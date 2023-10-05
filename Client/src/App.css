@@ -1,6 +1,7 @@
 
 .App {
   text-align: center;
+  background-color: #EDEBE4;
 }
 
 .App-logo {
@@ -52,7 +53,7 @@
 }
 .card-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap ;
   justify-content: space-around;
   margin-left: 100px;
   margin-right: 100px;
