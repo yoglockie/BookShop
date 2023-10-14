@@ -1,21 +1,39 @@
-import React from 'react'
+
+import React, { useEffect, useState } from 'react';
 import BookCard from '../BookCard/BookCard'
 
 const Mystery = () => {
+  const [products,setproducts] = useState([]);
+  
+  useEffect(()=>{
+      
+      const fetcheddata = async()=>{
+          try {
+            const response = await fetch("http://localhost:8080/products/mystery");
+            const data = await response.json();
+            console.log(data)
+            setproducts(data);
+          } catch (error) {
+            console.log(error);
+          }
+      }
+      fetcheddata(); 
+  },[])
   return (
     <>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
-      <BookCard imgurl="https://cdn.kobo.com/book-images/a9b56268-bf89-4b12-a502-b2a387f38300/1200/1200/False/if-she-knew-a-kate-wise-mystery-book-1.jpg" title="If She Knew" price="$19.99"/>
+      {
+        
+        products.map(product=>(
+          <BookCard
+          key={product._id} // Make sure to use a unique key for each item in the list
+          imgurl={product.image}
+          title={product.title}
+          price={product.price}
+        />
+        ))
+      }
+      
+     
      
 
     </>

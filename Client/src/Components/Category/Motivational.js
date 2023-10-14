@@ -1,25 +1,42 @@
-import React from 'react'
+
+import React, { useEffect, useState } from 'react';
 import BookCard from '../BookCard/BookCard'
 
 const Motivational = () => {
+  const [products,setproducts] = useState([]);
+  
+  useEffect(()=>{
+      
+      const fetcheddata = async()=>{
+          try {
+            const response = await fetch("http://localhost:8080/products/motivational");
+            const data = await response.json();
+            console.log(data)
+            setproducts(data);
+          } catch (error) {
+            console.log(error);
+          }
+      }
+      fetcheddata(); 
+  },[])
   return (
     <>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-    <BookCard imgurl="https://fourminutebooks.com/wp-content/uploads/2016/06/best-motivational-books-14-617x1024.jpg" title="Richest Man in Babylon" price="$19.99"/>
-   
+      {
+        
+        products.map(product=>(
+          <BookCard
+          key={product._id} // Make sure to use a unique key for each item in the list
+          imgurl={product.image}
+          title={product.title}
+          price={product.price}
+        />
+        ))
+      }
+      
+     
+     
 
-  </>
+    </>
   )
 }
 

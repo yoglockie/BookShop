@@ -1,43 +1,51 @@
 import React from 'react'
 import "./Cart.css"
+import { useCartContext } from '../../context/cartcontext';
+import CartItem from './CartItem';
+import {Link} from 'react-router-dom';
 
 const Cart = () => {
+    
+  const {cart,clearCart,total_price} = useCartContext();
+  console.log(cart);
+
+  if(cart.length===0)
+  {
+      return  <div className="parent">
+      <div className="container">
+           <h1>Shopping Cart 🛒</h1>
+           <hr />
+           <h5>No items in cart</h5>
+                 <div className="item">
+                    <Link to="/"><button>Home</button></Link>
+                 </div>
+      </div>
+ </div>
+  }
+
   return (
-    <div class="cart-container">
-        <h1>🛒</h1> 
-    <div class="cart-item">
-      <img src="https://m.media-amazon.com/images/I/51bX4hDuBIL.jpg" alt="Book 1" class="product-image"/>
-      <div class="product-details">
-        <p class="product-name">Book 1</p>
-        <p class="price">$19.99</p>
-      </div>
-      <div class="quantity-counter">
-        <span>Qty:</span>
-        <input type="number" value="1" min="1"/>
-      </div>
-    </div>
+      <div className="parent">
+           <div className="container">
+                <h1>Shopping Cart 🛒</h1>
 
-    <div class="cart-item">
-       
-      <img src="https://m.media-amazon.com/images/I/51seH-SzjuL.jpg" alt="Book 2" class="product-image"/>
-      <div class="product-details">
-        <p class="product-name">Book 2</p>
-        <p class="price">$24.99</p>
+                <div>
+                {
+                    cart.map((item)=>{
+                      return  <CartItem id={item.id} title={item.title} price={item.price} imgurl={item.imgurl} amount={item.amount}/>
+                    })
+                }
+                </div> 
+                 
+                 <hr />
+                 <div className="item">
+                    <Link to="/"><button>Home</button></Link>
+                    <button onClick={clearCart}>Clear Cart</button>
+                    <h4>Total price : ${total_price}</h4>
+                    <Link to="/orderform"><button id='checkout'>Checkout</button></Link>
+                    
+                 </div>
+           </div>
       </div>
-      <div class="quantity-counter">
-        <span>Qty:</span>
-        <input type="number" value="2" min="1"/>
-      </div>
-    </div>
-
-  
-
-    <div class="total-amount">
-      Total: $44.98
-    </div>
-
-    <a href="#" class="checkout-btn">Proceed to Checkout</a>
-  </div>
   )
 }
 
