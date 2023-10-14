@@ -44,7 +44,7 @@ const HomePage = () => {
           
          </ul>
      </div>
-     <SearchBar/>
+     <Link to="/search"><button className="search-button">&#128269;</button></Link>
       <div className="card-container">
           <Routes>
                 <Route path='/' element={<All/>}/>
@@ -52,7 +52,7 @@ const HomePage = () => {
                 <Route path='/mystery' element={<Mystery/>}/>
                 <Route path='/buisness' element={<Buisness/>}/>
                 <Route path='/motivational' element={<Motivational/>}/>
-                <Route path='/search' element={<Search/>}/>
+                
           </Routes>
       </div>
 

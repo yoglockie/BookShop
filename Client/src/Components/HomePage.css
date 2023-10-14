@@ -19,7 +19,16 @@
  color: blue;
 }
 
-
+.search-button {
+  background-color: lightblue;
+  color: white;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  
+}
 .card-container {
     display: flex;
     flex-wrap:wrap ;

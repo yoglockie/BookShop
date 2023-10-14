@@ -13,7 +13,7 @@ const CartItem = (props) => {
           <p>{props.amount}</p>
           <button onClick={()=>setIncrease(props.id)}>+</button>
          </div>
-         <button onClick={()=>removeItem(props.id)}>Delete</button>
+         <button id='del' onClick={()=>removeItem(props.id)}>Delete</button>
          <h4>${props.price*props.amount}</h4>
     </div>
   

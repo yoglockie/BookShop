@@ -27,7 +27,14 @@ const Cart = () => {
       <div className="parent">
            <div className="container">
                 <h1>Shopping Cart 🛒</h1>
-
+                <div className="item">
+                   <strong><h4>Image</h4></strong>
+                   <strong><h4>Title</h4></strong>
+                   <strong><h4>Quantity</h4></strong>
+                   <strong><h4>Delete</h4></strong>
+                   <strong><h4>Total Amount</h4></strong>
+                </div> 
+                <hr />
                 <div>
                 {
                     cart.map((item)=>{
@@ -37,7 +44,7 @@ const Cart = () => {
                 </div> 
                  
                  <hr />
-                 <div className="item">
+                 <div className="item-end">
                     <Link to="/"><button>Home</button></Link>
                     <button onClick={clearCart}>Clear Cart</button>
                     <h4>Total price : ${total_price}</h4>

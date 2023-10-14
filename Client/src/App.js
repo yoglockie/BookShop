@@ -15,7 +15,10 @@ import AddProduct from './Components/AddProduct/AddProduct';
 import OrderForm from './OrderForm/OrderForm';
 import OrderSummary from './OrderSummary/OrderSummary';
 import SuccessPage from './Success';
-
+import SearchBar from './Components/SearchBar/SearchBar';
+import About from './Components/NavMenu/About';
+import Services from './Components/NavMenu/Services';
+import Contact from './Components/NavMenu/Contact';
 
 function App() {
 
@@ -29,6 +32,10 @@ function App() {
           <Route path='/orderform' element={<OrderForm/>}/>
           <Route path='/ordersummary' element={<OrderSummary/>}/>
           <Route path='/success' element={<SuccessPage/>}/>
+          <Route path='/search' element={<SearchBar/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/service' element={<Services/>}/>
+          <Route path='/contact' element={<Contact/>}/>
       </Routes>
       
      
