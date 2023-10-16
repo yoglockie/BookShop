@@ -62,3 +62,80 @@
 #del{
 	margin-left: 20px;
 }
+
+
+.ritem{
+	display: none;
+
+}
+
+.ritem-end{
+	display: none;
+
+}
+
+
+@media screen and (max-width:700px){
+	.item{
+		display: none;
+	}
+	.ritem{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	padding: 10px;
+	
+   }  
+   .litem{
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+   }
+   .rritem{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+   }
+   .litem img {
+	  height: 250px;
+	  width: 200px;
+	  border-radius: 30px;
+	  margin: 10px;
+   }
+
+   .rritem button{
+	 margin: 10px;
+   }
+   .item-end{
+	display: none;
+   }
+   .ritem-end{
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+
+   }
+
+  .rritem-end{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+.rritem-end button{
+	margin: 10px;
+}
+.id-btn{
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	border-radius: 50%;
+	padding: 7px;
+}
+}

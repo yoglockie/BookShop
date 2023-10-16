@@ -30,8 +30,28 @@ const ProductPage = () => {
                 <button>Add to cart</button>
               </Link>
          </div>
+        </div>
 
-    </div>
+        <div className='lpage'>
+        
+         
+             <img src={propsdata.imgurl} alt="" />
+              <h1>{propsdata.title}</h1> 
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consequatur dolore quas voluptates mollitia sunt.</p>
+              <p>${propsdata.price}</p>
+              <div className="rating">⭐⭐⭐⭐</div>
+
+              <Link 
+              to='/cart'
+              onClick={()=>addToCart(propsdata.id,propsdata.title,propsdata.imgurl,propsdata.price,1)}
+              >
+                <button>Add to cart</button>
+              </Link>
+         
+        </div>
+
+         
+
     </div>
     
   )

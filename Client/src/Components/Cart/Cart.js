@@ -51,6 +51,17 @@ const Cart = () => {
                     <Link to="/orderform"><button id='checkout'>Checkout</button></Link>
                     
                  </div>
+                 <div className="ritem-end">
+                    <div className='rritem-end'>
+                    <Link to="/"><button>Home</button></Link>
+                    <button onClick={clearCart}>Clear Cart</button>
+                    </div>
+                    <div className='rritem-end'>
+                    <h4>Total price : ${total_price}</h4>
+                    <Link to="/orderform"><button id='checkout'>Checkout</button></Link>
+                    </div>
+                    
+                 </div>
            </div>
       </div>
   )
