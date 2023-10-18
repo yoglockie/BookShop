@@ -19,7 +19,7 @@ const CartProvider = ({children})=>{
     }
 
     const initialstate = {
-       // cart:[],
+        //cart:[],
         cart:getLocalData(),
         total_item:"",
         total_price:""

@@ -52,7 +52,7 @@ const OrderForm = () => {
               id="address" name="address" rows="4" 
               value={formData.address}
               onChange={handleChange}
-              required></textarea>
+              required ></textarea>
         </div>
 
        <Link 

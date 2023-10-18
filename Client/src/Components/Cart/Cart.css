@@ -22,7 +22,7 @@
 .item{
 	display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr 2fr;
-	height: 20vh;
+	/* height: 20vh; */
 	justify-content: space-around;
 	align-items: center;
 	margin: 20px;
@@ -37,7 +37,9 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
+hr {
+    width: 95%;
+}
 .item img{
 	height: 150px;
 	width: 150px;

@@ -57,8 +57,10 @@ const HomePage = () => {
       </div>
 
 
-
-     <BestSelling/>
+      <div className='bests'>
+      <BestSelling/>
+      </div>
+     
      <div className="author-container">
           <Author/>
           <Author/>
