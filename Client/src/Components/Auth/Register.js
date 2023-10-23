@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Register.css";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 const Register = () => {
    
     const navigate = useNavigate();
@@ -14,15 +14,20 @@ const Register = () => {
         e.preventDefault();
         try {
             const res =await axios.post("http://localhost:8080/products/signup",{name,email,password});
-           
-              if(res.data=="alreadyexist")
+            console.log(res);
+            if (res.data.errors) {
+              // Handle validation errors here
+              const errorMessages = res.data.errors.map(error => error.msg);
+              alert(errorMessages.join('\n'));
+            }
+            else if(res.data=="alreadyexist")
               {
                 alert("Email already exist");
               }
               else if(res.data=="added")
               {          
-                     alert("Account created please login !!"); 
-                    navigate("/");
+                    alert("Account created please login !!"); 
+                    navigate("/home");
               }
            
         } catch (error) {
@@ -51,7 +56,7 @@ const Register = () => {
         <input type="Submit" value="Register Now" onClick={submit}/>
       </div>
       <div class="text">
-        <h3>Already have an account? <a href="#">Login now</a></h3>
+        <h3>Already have an account? <Link to="*">Login now</Link></h3>
       </div>
     </form>
   </div>

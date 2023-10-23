@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Login.css";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 const Login = () => {
    const navigate = useNavigate();
    const [email,setEmail]=useState("");
@@ -14,7 +14,7 @@ const Login = () => {
                 
                  if(response.data=="exist")
                  {
-                    navigate("/");
+                    navigate("/home");
                  }
                  else if(response.data=="invalid")
                  {
@@ -55,7 +55,7 @@ const Login = () => {
                <input type="submit" value="Login" onClick={submit}/>
             </div>
             <div class="signup-link">
-               Not a member? <a href="#">Signup now</a>
+               Not a member? <Link to="/register">Signup now</Link>
             </div>
          </form>
       </div>

@@ -17,7 +17,7 @@ const Cart = () => {
            <hr />
            <h5>No items in cart</h5>
                  <div className="item">
-                    <Link to="/"><button>Home</button></Link>
+                    <Link to="/home"><button>Home</button></Link>
                  </div>
       </div>
  </div>
@@ -45,7 +45,7 @@ const Cart = () => {
                  
                  <hr />
                  <div className="item-end">
-                    <Link to="/"><button>Home</button></Link>
+                    <Link to="/home"><button>Home</button></Link>
                     <button onClick={clearCart}>Clear Cart</button>
                     <h4>Total price : ${total_price}</h4>
                     <Link to="/orderform"><button id='checkout'>Checkout</button></Link>
@@ -53,7 +53,7 @@ const Cart = () => {
                  </div>
                  <div className="ritem-end">
                     <div className='rritem-end'>
-                    <Link to="/"><button>Home</button></Link>
+                    <Link to="/home"><button>Home</button></Link>
                     <button onClick={clearCart}>Clear Cart</button>
                     </div>
                     <div className='rritem-end'>

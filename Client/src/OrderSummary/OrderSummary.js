@@ -41,8 +41,8 @@ const OrderSummary = () => {
          const options = {
           key:"rzp_test_1y7gcpEMsogt5N",
           currency:"INR",
-          amount:"5000",
-          name:"Lokesh",
+          amount:"207200",
+          name:propsdata.name,
           description:"Thanks for purchase",
           image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKn2voLX6l8xo_rILZYc4dXoLspHRJJ4y4owzNoHne&s",
           handler: function (response) {
@@ -94,7 +94,7 @@ const OrderSummary = () => {
 
       <div className="total-amount">
         <h2>Total Amount</h2>
-        <p><strong>Total:</strong> ${total_price}</p>
+        <p><strong>Total:</strong> ₹{total_price*80}</p>
       </div>
       
       <button className="pay-button" onClick={displayRazorpay}>Pay Now</button>

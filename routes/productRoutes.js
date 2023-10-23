@@ -4,7 +4,7 @@ import users from '../model/userSchema.js';
 const router = express.Router();
 import mongoose from 'mongoose';
 import bcrypt from "bcrypt";
-
+import {body, validationResult} from "express-validator";
 
 router.post("/login", async(req,res)=>{
       const {email,password}=req.body;
@@ -33,7 +33,21 @@ router.post("/login", async(req,res)=>{
       }
 })
 
-router.post("/signup", async(req,res)=>{
+router.post("/signup",
+    
+    [
+        body("name").notEmpty().withMessage("Name is Required"),
+        body("email").isEmail().withMessage("Email format is not valid"),
+        body("password").isLength({min:8}).withMessage("Password must be at least 8 character long")
+    ],
+
+    async(req,res)=>{
+
+    const errors = validationResult(req);
+     if(!errors.isEmpty()) {
+       
+       return  res.json({ errors: errors.array() });
+      }    
     const {name,email,password}=req.body;
     const hpassword = await bcrypt.hash(password,10);
     const data= {
@@ -41,10 +55,7 @@ router.post("/signup", async(req,res)=>{
         email:email,
         password:hpassword
     }
-   async function ok() {
-       await console.log( bcrypt.hash("12345678",10));
-    } 
-    ok();
+   
     try {
         
         const check = await users.find({email:email});

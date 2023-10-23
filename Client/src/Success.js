@@ -77,7 +77,7 @@ const SuccessPage = () => {
       
     </div>
       
-      <Link to='/'><button onClick={handleDownload}>Download PDF</button></Link>
+      <Link to='/home'><button onClick={handleDownload}>Download PDF</button></Link>
     </div>
     
   );

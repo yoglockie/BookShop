@@ -20,7 +20,7 @@ const BookCard = (props) => {
       <img src={props.imgurl} alt="Book 1"/>
       <h5>{props.title}</h5>
      <p className="price">$ {props.price}</p>
-     <div className="rating">⭐⭐⭐⭐</div>
+     {/* <div className="rating">⭐⭐⭐⭐</div> */}
     </Link>
      
     
