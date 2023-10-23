@@ -1,7 +1,70 @@
 import express from 'express'
 import books from '../model/bookschema.js';
-
+import users from '../model/userSchema.js';
 const router = express.Router();
+import mongoose from 'mongoose';
+import bcrypt from "bcrypt";
+
+
+router.post("/login", async(req,res)=>{
+      const {email,password}=req.body;
+
+      try {
+        const check = await users.find({email:email});
+        console.log(check);
+        if(check.length>0)
+        {
+            const isValid = await bcrypt.compare(password,check[0].password);
+            if(isValid)
+            {
+                res.json("exist");
+            }
+            else
+            {
+                res.json("invalid")
+            } 
+            
+        }
+        else{
+            res.json("notexist");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+})
+
+router.post("/signup", async(req,res)=>{
+    const {name,email,password}=req.body;
+    const hpassword = await bcrypt.hash(password,10);
+    const data= {
+        name:name,
+        email:email,
+        password:hpassword
+    }
+   async function ok() {
+       await console.log( bcrypt.hash("12345678",10));
+    } 
+    ok();
+    try {
+        
+        const check = await users.find({email:email});
+        
+        if(check.length>0)
+        {
+            res.json("alreadyexist");
+        }
+        else
+        {
+            await users.insertMany([data]);
+            res.json("added");
+        }
+
+
+
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 
 router.post("/add", async(req,res)=>{
