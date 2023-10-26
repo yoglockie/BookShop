@@ -1,6 +1,5 @@
 import React from 'react'
 import './HomePage.css';
-
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
 import Carousal from './Carousal/Carousal';
@@ -14,7 +13,6 @@ import Buisness from './Category/Buisness';
 import Fiction from './Category/Fiction';
 import Motivational from './Category/Motivational';
 import Mystery from './Category/Mystery';
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -37,7 +35,7 @@ const HomePage = () => {
      <div className="category">
          <ul>
           <Link to="/"><li>All</li></Link>
-          <Link to="/fiction"><li>Fiction</li></Link>
+          <Link to='/fiction'><li>Fiction</li></Link>
           <Link to="/mystery"><li>Mystery</li></Link>
           <Link to="/buisness"><li>Buisness</li></Link>
           <Link to="/motivational"><li>Motivational</li></Link>

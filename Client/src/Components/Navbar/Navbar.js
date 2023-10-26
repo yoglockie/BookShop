@@ -3,6 +3,7 @@ import "./Navbar.css";
 import {AiOutlineShoppingCart as Cart} from "react-icons/ai";
 import {BsSearch as Search} from "react-icons/bs" ;
 import { useCartContext } from '../../context/cartcontext';
+import book from "./booklogo.png"
 import {
   createBrowserRouter,
   RouterProvider,
@@ -21,7 +22,7 @@ const Navbar = () => {
    
    <nav className="navbar">
   <div className="left-section">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKn2voLX6l8xo_rILZYc4dXoLspHRJJ4y4owzNoHne&s" alt="Company Logo"/>
+    <img src={book} alt="Company Logo"/>
   </div>
   <div className="middle-section">
     <ul>
