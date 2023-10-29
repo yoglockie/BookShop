@@ -26,16 +26,17 @@ const Navbar = () => {
   </div>
   <div className="middle-section">
     <ul>
-      <li><Link to="/home">Home</Link></li>
+      <li><Link to="/">Home</Link></li>
       <li><Link to="/service">Services</Link></li>
       <li><Link to="/about">About</Link></li>
       <li><Link to="/contact">Contact</Link></li>
     </ul>
   </div>
   <div className="right-section">
+    <Link to="login"><button id='lbtn'>Logout</button></Link>
     <div className="cart-icon">
       <Link to="/cart">
-        🛒
+        <span id='cicon'>🛒</span>
         {total_item > 0 && <span className="cart-count">{total_item}</span>}
       </Link>
     </div>

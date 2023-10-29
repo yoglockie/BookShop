@@ -27,7 +27,7 @@ const Register = () => {
               else if(res.data=="added")
               {          
                     alert("Account created please login !!"); 
-                    navigate("/home");
+                    navigate("/");
               }
            
         } catch (error) {
@@ -56,7 +56,7 @@ const Register = () => {
         <input type="Submit" value="Register Now" onClick={submit}/>
       </div>
       <div class="text">
-        <h3>Already have an account? <Link to="*">Login now</Link></h3>
+        <h3>Already have an account? <Link to="/login">Login now</Link></h3>
       </div>
     </form>
   </div>

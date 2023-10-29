@@ -14,7 +14,7 @@ const Login = () => {
                 
                  if(response.data=="exist")
                  {
-                    navigate("/home");
+                    navigate("/");
                  }
                  else if(response.data=="invalid")
                  {

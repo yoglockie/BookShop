@@ -2,9 +2,7 @@ import React from 'react'
 import './ProductPage.css'
 import { useLocation,Link} from 'react-router-dom';
 import { useCartContext } from '../../context/cartcontext';
-
 const ProductPage = () => {
-  
   const {addToCart}=useCartContext();
   const location = useLocation();
   const propsdata=location.state;
@@ -50,11 +48,7 @@ const ProductPage = () => {
          
         </div>
 
-         
-
-    </div>
-    
+        </div>
   )
 }
-
 export default ProductPage

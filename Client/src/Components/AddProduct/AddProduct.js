@@ -12,7 +12,6 @@ const AddProduct = () => {
     category:""
 
   })
-
   const handleonChange=(e)=>{
        console.log(e);
        setformData({...formData,[e.target.name]:e.target.value});

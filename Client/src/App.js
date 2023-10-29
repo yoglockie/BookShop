@@ -21,13 +21,18 @@ import Services from './Components/NavMenu/Services';
 import Contact from './Components/NavMenu/Contact';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
+import { useState } from 'react';
 
 function App() {
 
+  const [logged,setLogged]=useState(0);
   return (
     <div className="App">
       <Routes>
-          <Route path='*' element={<Login/>}/>
+         
+          <Route path='login' element={<Login/>}/>
+
+          <Route path='*' element={<HomePage/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/productpage' element={<ProductPage/>}/>
           <Route path='/addproduct' element={<AddProduct/>}/>
@@ -39,7 +44,6 @@ function App() {
           <Route path='/service' element={<Services/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/register' element={<Register/>}/>
-          <Route path='/home' element={<HomePage/>}/>
       </Routes>
       
      

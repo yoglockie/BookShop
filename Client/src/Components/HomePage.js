@@ -13,20 +13,8 @@ import Buisness from './Category/Buisness';
 import Fiction from './Category/Fiction';
 import Motivational from './Category/Motivational';
 import Mystery from './Category/Mystery';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Routes,
-} from "react-router-dom";
+import {createBrowserRouter,RouterProvider,BrowserRouter as Router,Route,Link,Routes,} from "react-router-dom";
 import Search from './Category/Search';
-
-
-
-
-
 const HomePage = () => {
   return (
     <div>
